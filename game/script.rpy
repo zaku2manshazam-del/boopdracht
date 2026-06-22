@@ -12,14 +12,14 @@ image heathcliff concerned = Transform("heathcliff concerned.png", xysize=(400, 
 image beelzebub neutral = Transform("beelzebub neutral.png", xysize=(800, 900))
 image beelzebub neutralspeaking = Transform("beelzebub neutralspeaking.png", xysize=(900, 1000))
 image beelzebub smiling = Transform("beelzebub smiling.png", xysize=(800, 900))
-image beelzebub smilingspeaking = Transform("beelzebub smiling.png", xysize=(900, 1000))
+image beelzebub angry = Transform("beelzebub angry.png", xysize=(800, 900))
+image beelzebub angry2 = Transform("beelzebub angry.png", xysize=(1100, 1200))
 
 image gabriel test1= Transform("gabriel angry1.png")
 image gabriel test2= Transform("gabriel angry2.png")
 
 transform centerright:
     xalign 0.9
-    yalign 5
 
 label start:
     with fade
@@ -143,18 +143,58 @@ label start:
 
 
 
-    # menu:
-    # "How will Heathcliff convince Gabriel? Use force or use words?"
+    menu:
+        "How will Heathcliff convince Gabriel? Use force or use words?"
 
-    #     "Force.":
-    #     jump forceful
+        "Force.":
+            "Forceful."
+            jump forceful
 
-    #     "Words.":
-    #     jump peaceful
+        "Words.":
+            "Peaceful."
+            jump peaceful
 
 
 label forceful:
     with dissolve
     scene bg throneroom full
 
+    "Heathcliff stepped forward to Gabriel once more, grabbing his arm and pulling him closer and swinging him behind his back."
+
+    show gabriel test1 at right
+    show heathcliff discomfortspeaking at left
+    show beelzebub neutral at centerright
+
+    h "Gabriel. I'll make sure you get the help you need." 
+
+    hide gabriel test1
+    hide heathcliff discomfortspeaking
+    show beelzebub angry2 at center
+
+    "But Beelzebub didn't take this very well, lunging a spike at the brothers."
+
+    hide beelzebub angry
+
+    "Gabriel strugged in Heathcliff's grip as his brother dragged him along and ran.
+    There had to be a better way out of this place, Heathcliff thought, but he went back the same way he went in, fighting off the deciples of Beelzebub on the way."  
+
+    g "Heathcliff you don't understand!! Let me go!" 
+
+    g "Why are you always contradicting me you asshole?!" 
+
+    g "I wont make it out of here Heathcliff.." 
+
+
+    "Until he just.. accepted it. Heathcliff wasn't letting go, not until Gabriel was safe. And in a way, he felt peace. 
+    Even with Beelzebub's wrathful army of insects following them, they were rapidly approaching the light at the end of the hellish staircase."
+
+    "When they stepped into the light, they couldn't believe what they saw. The cult they'd visited was so phased by Heathcliff killing the disciples that they had all slit their own throats in a twisted ritualistic circle."
+
+
+    h "Ya still want to be a freaky cultist now?" 
+
+
+    "Heathcliff joked, putting Gabriel down. He didn't want to look at Heathcliff at first, but he shook his head. No, he didn't."
+
+    return
 
