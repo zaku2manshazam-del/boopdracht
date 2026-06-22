@@ -12,7 +12,7 @@
 ##
 ## The _() surrounding the string marks it as eligible for translation.
 
-define config.name = _("Consumed By Flies")
+define config.name = _("Consumed by Flies")
 
 
 ## Determines if the title given above is shown on the main menu screen. Set
@@ -37,7 +37,7 @@ define gui.about = _p("""Created by Glutton Games
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "ConsumedByFlies"
+define build.name = "ConsumedbyFlies"
 
 
 ## Sounds and music ############################################################
@@ -143,7 +143,7 @@ default preferences.afm_time = 15
 ## This generally should not be changed, and if it is, should always be a
 ## literal string, not an expression.
 
-define config.save_directory = "ConsumedByFlies-1781163120"
+define config.save_directory = "ConsumedbyFlies-1781163120"
 
 
 ## Icon ########################################################################
