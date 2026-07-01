@@ -1619,3 +1619,31 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
+style credits_text:
+    color "#7e4601"
+    size 30
+    font "DejaVuSans.ttf"
+    xalign 0.5
+
+screen about():
+
+    tag menu
+    use game_menu(_("About"), scroll="viewport"):
+        style_prefix "about"
+    add "#ebebeb"
+
+    vbox:
+        xalign 0.5
+        yalign 0.5
+        spacing 20
+
+        text "Created by Glutton Games" size 40 xalign 0.5 color "#ffb300"
+        text "Game Developer: Quin/Femke" style "credits_text"
+        text "Game Artist Character Design: Abi (base designs), Flint (Gabriel), Xin Yue (Beelzebub, Heathcliff)" style "credits_text"
+        text "Game Artist Background: Nienke" style "credits_text"
+        text "Story Writer: Abi" style "credits_text"
+        text "Other members: Adem, Mees, Nathan, Joy" style "credits_text"
+
+    textbutton "Return" action Return() xalign 0.5 yalign 0.9
